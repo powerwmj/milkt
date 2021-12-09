@@ -1,0 +1,40 @@
+@import '_common';
+
+.contents { 
+    .inner.login {
+        padding: 85px 0 230px 0;
+        .tit {
+            text-align: center; height: 125px;
+            h3 {font-size: 3rem; color: #111; font-weight: 700;}
+            p {margin-top: 22px; font-size: 1.25rem; color: #999; line-height: 31px;}
+        }
+        .log_w {
+            position: relative; margin-top: -32px; padding-top: 32px; margin-left: 163px; width: 883px; height: 643px; background: url('../img/bg_login.png') 50% 50% / 883px 643px no-repeat;
+            ul.log {
+                width: 423px; margin: 208px 0 0 155px;
+                li {margin-bottom: 1px; position: relative;}
+                li::before {content: ''; display: block; width: 25px; height: 30px; left: 20px; top: calc(50% - 15px); position: absolute; z-index: 1;}
+                li:nth-of-type(1)::before {background: #fff url('../img/ico_login.png') no-repeat 0 0;}
+                li:nth-of-type(2)::before {background: #fff url('../img/ico_login.png') no-repeat 0 -70px;}
+                li label {display: none;}
+                li input{width: 100%; height: 73px;   border: 0; padding: 10px 0 0 55px; position: relative;}
+                li a {display: block; padding: 20px 0; color: #fff; background-color: #0c86ee; font-size: 1.25rem; text-align: center; border-radius: 5px; margin-top: 14px;}
+                
+            }
+            
+            .setting {
+                display: flex; justify-content: space-between; width: 423px; margin: 0 0 0 155px; height: 40px; line-height: 40px;
+                .chk {
+                    label {color: #222; font-size: 0.875rem;}
+                }
+                ul {
+                    display: flex;
+                }
+                ul li:nth-of-type(1) {&::before {content: '0'; font-size: 0;}}
+                ul li {&::before {content: '|'; font-size: 0.5rem;}}
+                ul li a {font-size: 0.875rem; color: #222; padding: 0 12px;}
+            }
+            
+        }
+    }
+}
