@@ -137,8 +137,8 @@ main {position: relative;}
         }
         .slide_w {
             position: relative;
-            &::before {content: ''; width: 100px; height: 100px; position: absolute; top: -165px; right: 15%; background: url('../img/objs_char.png'); animation: char 2s infinite linear;}
-            &::after {content: ''; width: 125px; height: 160px; position: absolute; top: -90px; right: 30%; background: url('../img/objs_char.png') 0 -100px; z-index: -1;}
+            &::before {@include ab_c; width: 100px; height: 100px; top: -165px; right: 15%; background: url('../img/objs_char.png'); animation: char 2s infinite linear;}
+            &::after {@include ab_c; width: 125px; height: 160px; top: -90px; right: 30%; background: url('../img/objs_char.png') 0 -100px; z-index: -1;}
             @keyframes char {
                 50% {top: -145px;}
                 100% {top: -165px;}
@@ -150,9 +150,9 @@ main {position: relative;}
                 .next {right: 60px; background-position: 0 -60px;}
             }
             .slide {
-                display: flex; justify-content: space-between;
-                &::before {content: ''; width: 100px; height: 120px; position: absolute; bottom: 135px; right: -75px; background: url('../img/objs_char.png') 0 -265px;}
-                &::after {content: ''; width: 175px; height: 155px; position: absolute; bottom: 135px; left: -140px; background: url('../img/objs_char.png') 0 -385px; z-index: -1;}
+                @include flex(space-between, stretch);
+                &::before {@include ab_c; width: 100px; height: 120px; bottom: 135px; right: -75px; background: url('../img/objs_char.png') 0 -265px;}
+                &::after {@include ab_c; width: 175px; height: 155px; bottom: 135px; left: -140px; background: url('../img/objs_char.png') 0 -385px; z-index: -1;}
                 li {
                     .img {padding: 29px; border: 3px solid #eef5fb; border-radius: 25px; background: #fff; display: block; margin-bottom: 28px;}
                     strong {font-size: 24px; color: #181818; font-weight: 500; margin-bottom: 16px; display: block;}
@@ -172,7 +172,7 @@ main {position: relative;}
     margin-top: -230px; 
     .inner {position: relative;
         .txt {
-            &::after {content: ''; width: 443px; height: 92px; position: absolute; top: 139px; right: 0; background: url('../img/img_review_friend.png');}
+            &::after {@include ab_c; width: 443px; height: 92px; top: 139px; right: 0; background: url('../img/img_review_friend.png');}
             h3 {font-size: 48px; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
                 span {color: #07a3ea;}
             }
@@ -185,9 +185,9 @@ main {position: relative;}
     .review {
         width: 100%; height: 600px; background: url('../img/bg_review.png') center no-repeat; 
         .inner {
-            display: flex; align-items: center; justify-content: space-around; height: 100%;
+            @include flex(space-around, center); height: 100%;
             ul {
-                display: flex; justify-content: space-between; width: 100%;
+                @include flex(space-between, stretch); width: 100%;
                 li {
                     text-align: center;
                     .img {display: block; margin-bottom: 25px;}
@@ -204,14 +204,14 @@ main {position: relative;}
         padding: 120px 0;
         .tit {
             margin-bottom: 40px;
-            display: flex; justify-content: space-between; align-items: center; width: 100%; height: 28px;
+            @include flex(space-between, center); width: 100%; height: 28px;
             h3 {font-size: 28px; line-height: 1; color: #181818;}
             a {display: inline-block; width: 36px; height: 36px; background: url('../img/icons.png') 0 -120px; font-size: 0;}
         }
         ul {
-            display: flex; justify-content: space-between; flex-wrap: wrap;
+            @include flex(space-between, stretch); flex-wrap: wrap;
             li {
-                padding: 35px 0; display: flex; justify-content: space-between; align-items: center; width: 30%; border-bottom: 1px solid #e5e5e5;
+                padding: 35px 0; @include flex(space-between, center); width: 30%; border-bottom: 1px solid #e5e5e5;
                 .txt {
                     width: 75%;
                     a {font-size: 17px; line-height: 28px; word-break: break-all; color: #181818;}
@@ -234,10 +234,10 @@ main {position: relative;}
             h3 {font-size: 28px; line-height: 1; color: #181818;}
         }
         ul {
-            display: flex; justify-content: space-between; align-items: center; overflow: hidden;
+            @include flex(space-between, center);overflow: hidden;
             li {
                 width: 20%; height: 100%; text-align: center; position: relative;
-                &::after {content: ''; position: absolute; border-left: 1px solid #e5e5e5; width: 100%; height: 100%; top: 0; left: -38px; z-index: -1;}
+                &::after {@include ab_c; border-left: 1px solid #e5e5e5; width: 100%; height: 100%; top: 0; left: -38px; z-index: -1;}
                 a {
                     width: 100%; height: 100%; color: inherit; outline: 1px solid #f00;
                     i {display: block; font-size: 0; height: 65px;}

@@ -40,33 +40,33 @@
     .geni_tab {
         width: 100%; height: 82px; background: #000; text-align: center; margin-bottom: 61px;
         ul {
-            width: 960px; height: 100%; margin: 0 auto; display: flex; justify-content: space-around; align-items: center;
+            width: 960px; height: 100%; margin: 0 auto; @include flex(space-around, center);
             li {
                 position: relative;
                 a {position:absolute; z-index: 3; transform: translate(-50%,-50%);}
             }
             li.on{
                 
-                &::after {position: absolute; content: ''; display: block; width: 390px; height: 143px; background: url('../img/tab_on.png'); left: 50%; top: -41px; transform: translateX(-50%); z-index: 1;}
+                &::after {@include ab_c; width: 390px; height: 143px; background: url('../img/tab_on.png'); left: 50%; top: -41px; transform: translateX(-50%); z-index: 1;}
             }
         }
     }
 
     .sec_kids {
         width: 1920px; margin: 0 auto; position: relative; padding-top: 100px;
-        &::before {content: ''; display: block; position: absolute; width: 338px; height: 707px; top: 25px; right: 0; background: url('../img/bg_ele_01.png');}
-        &::after {content: ''; display: block; position: absolute; width: 252px; height: 677px; top: 797px; left: 0; background: url('../img/bg_ele_02.png');}
+        &::before {@include ab_c; width: 338px; height: 707px; top: 25px; right: 0; background: url('../img/bg_ele_01.png');}
+        &::after {@include ab_c; width: 252px; height: 677px; top: 797px; left: 0; background: url('../img/bg_ele_02.png');}
     }
     .sec_kids2 {
         padding-top: 185px;
         .container {width: 1080px; margin: 0 auto; text-align: center;}
         .slide_w {
-            margin: 90px auto; width: 1920px; text-align: center; height: 740px; position: relative;
+            margin: 90px auto; width: 1920px; text-align: center; position: relative;
             .slide{
                 position: relative;
-                &::after{content: ''; display: block; position: absolute; width: 387px; height: 265px; bottom: 50px; left: 60%; background: url('../img/genia_03.png');}
+                &::after{@include ab_c; width: 387px; height: 265px; bottom: 50px; left: 60%; background: url('../img/genia_03.png');}
             }
-            .slide ul {display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;}
+            .slide ul {@include flex(space-around, center); flex-wrap: wrap;}
             .arrow {
                 position: absolute; top: 45%; width: 100%;
                 .prev {left: 535px; font-size: 0; width: 63px; height: 63px; background: url('../img/btn_left.png'); display: inline-block; position: absolute;}

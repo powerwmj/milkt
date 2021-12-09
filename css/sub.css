@@ -75,6 +75,12 @@ header .hinner div nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 header .hinner div nav ul li {
@@ -91,6 +97,12 @@ header .hinner .gnb ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 header .hinner .gnb ul li {
@@ -111,6 +123,7 @@ header .hinner .gnb ul li:nth-of-type(1)::before {
 header .hinner .gnb ul li:nth-of-type(3)::after {
   content: '';
   position: absolute;
+  display: block;
   width: 12px;
   height: 8px;
   top: 10px;
@@ -300,6 +313,9 @@ footer .copy_w .inner .cs ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 20px;
@@ -320,6 +336,7 @@ footer .copy_w .inner .cs ul li span {
 footer .copy_w .inner .cs ul li span::after {
   content: '';
   position: absolute;
+  display: block;
   width: 1px;
   height: 10px;
   background: #424242;
@@ -341,9 +358,10 @@ footer .copy_w .inner .cs a.faq {
 
 footer .copy_w .inner .cs a.faq::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 5px;
   height: 9px;
-  position: absolute;
   background: url("../img/icons_layout.png") 0 -120px;
   top: 10px;
   left: 50px;
@@ -357,6 +375,9 @@ footer .copy_w .inner .cs ul.sns {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 footer .copy_w .inner .cs ul.sns li {
@@ -415,11 +436,11 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .quick_top a::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 10px;
   height: 6px;
-  position: absolute;
   background: url("../img/icons_layout.png") 0 -80px;
-  display: block;
   left: 20px;
   top: 15px;
 }
@@ -430,11 +451,11 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents.intro::before {
   content: '';
+  position: absolute;
   display: block;
   background: url("../img/index_shape.png") no-repeat;
   width: 1454px;
   height: 3124px;
-  position: absolute;
   z-index: -1;
   left: 50%;
   top: 245px;
@@ -474,11 +495,11 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .cont_1 .obj_w .obj_2::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 945px;
   height: 732px;
   background: url("../img/index_obj2.png") no-repeat;
-  position: absolute;
-  display: block;
   top: 45px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -694,24 +715,24 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .cont_2 .inner .con_w .obj_02::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 480px;
   height: 470px;
-  position: absolute;
   background: url("../img/index_obj4_pic.jpg") no-repeat -150px 0;
   top: 0;
   left: 45px;
-  display: block;
 }
 
 .contents .cont_2 .inner .con_w .obj_02::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 481px;
   height: 471px;
-  position: absolute;
   background: url("../img/index_obj4_mask.png");
   top: 0;
   left: 45px;
-  display: block;
 }
 
 .contents .review_w .inner .tit {
@@ -766,13 +787,13 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .review_w .inner .box_w .box .box_inner h4::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 100%;
   height: 2px;
   background: #161616;
   left: 0;
   bottom: 18px;
-  display: block;
-  position: absolute;
 }
 
 .contents .review_w .inner .box_w .box .box_inner .qna {
@@ -794,24 +815,24 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .review_w .inner .box_w .box .box_inner .qna p.q::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 71px;
   height: 71px;
   background: url("../img/index_obj_cir.png") 0 -770px;
-  position: absolute;
   left: 0;
   top: 0;
-  display: block;
 }
 
 .contents .review_w .inner .box_w .box .box_inner .qna p.q::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 4px;
   height: 31px;
   background: url("../img/index_obj_cir.png") 0 -960px;
-  position: absolute;
   left: 34px;
   top: 77px;
-  display: block;
 }
 
 .contents .review_w .inner .box_w .box .box_inner .qna p.a {
@@ -827,10 +848,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .review_w .inner .box_w .box .box_inner .qna p.a span::before {
   content: '';
+  position: absolute;
   display: block;
   width: 100%;
   height: 7px;
-  position: absolute;
   background: #d7e7fe;
   left: 0;
   bottom: 0;
@@ -839,13 +860,13 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .review_w .inner .box_w .box .box_inner .qna p.a::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 71px;
   height: 71px;
   background: url("../img/index_obj_cir.png") 0 -850px;
-  position: absolute;
   left: 0;
   top: 0;
-  display: block;
 }
 
 .contents .review_w .inner .box_w .box .box_inner .qna p.c {
@@ -891,13 +912,13 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .contents .review_w .inner .box_w .btn_next a::before {
   content: '';
+  position: absolute;
+  display: block;
   background: url("../img/index_obj_cir.png") 0 -930px;
   width: 14px;
   height: 24px;
-  display: block;
   left: 28px;
   top: 23px;
-  position: absolute;
 }
 
 .contents .btn_area {
@@ -1025,6 +1046,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .contents .rcon_01 .inner .slide_w .slide li .txt {
@@ -1062,10 +1086,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 .contents .rcon_01 .inner .slide_w .slide li div::before {
   content: '';
   position: absolute;
+  display: block;
   width: 540px;
   height: 528px;
   background: url("../img/bg_ellipse.png");
-  display: block;
   top: -26px;
   left: -14px;
   z-index: 1;
@@ -1074,10 +1098,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 .contents .rcon_01 .inner .slide_w .slide li div::after {
   content: '';
   position: absolute;
+  display: block;
   width: 663px;
   height: 498px;
   background: url("../img/bg_ellipse_char.png") no-repeat;
-  display: block;
   top: 0;
   left: -50px;
   z-index: 2;
@@ -1174,6 +1198,12 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   width: 100%;
   height: 540px;
   border-radius: 70px 0 70px 0;
@@ -1217,6 +1247,12 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   width: 100%;
   border-radius: 70px 0 70px 0;
   -webkit-box-shadow: 0px 9px 70px 0px rgba(0, 0, 0, 0.14);
@@ -1331,6 +1367,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .contents .rcon_03 .slide_w .arrow {
@@ -1380,6 +1419,12 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   height: 75px;
   border-top: 1px solid #141414;
   border-bottom: 1px solid #e0e0e0;
@@ -1406,6 +1451,12 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   min-height: 75px;
   border-bottom: 1px solid #e0e0e0;
   height: 100%;
@@ -1508,13 +1559,13 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .noti_w .inner dl dd::before {
   content: '';
+  position: absolute;
   display: block;
   width: 2px;
   height: 2px;
   background: #d8ad76;
   left: 0;
   top: 12px;
-  position: absolute;
 }
 
 .noti_w .inner dl dd span {
@@ -1802,11 +1853,11 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 .trial_w .inner .box::before {
   content: '';
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: block;
   border-radius: 85px;
   z-index: 1;
   background: #fff;
@@ -1933,9 +1984,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 .trial_w .inner .box2 .talk_w .talk1::before {
-  display: block;
   content: '';
   position: absolute;
+  display: block;
   top: 10px;
   left: -16px;
   width: 44px;
@@ -1949,9 +2000,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 .trial_w .inner .box2 .talk_w .talk2::before {
-  display: block;
   content: '';
   position: absolute;
+  display: block;
   top: 10px;
   left: -16px;
   width: 44px;
@@ -1965,9 +2016,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 .trial_w .inner .box2 .talk_w .talk3::before {
-  display: block;
   content: '';
   position: absolute;
+  display: block;
   top: 10px;
   right: -16px;
   width: 44px;
@@ -1981,9 +2032,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 .trial_w .inner .box2 .talk_w .talk4::before {
-  display: block;
   content: '';
   position: absolute;
+  display: block;
   top: 10px;
   right: -16px;
   width: 44px;
@@ -2097,6 +2148,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin-top: 80px;
 }
 
@@ -2263,25 +2317,25 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 .btmcon a::before {
+  content: '';
   position: absolute;
+  display: block;
   width: 52px;
   height: 66px;
   top: 42px;
   left: 410px;
   background: url("../img/objs_top_1.png") -2700px -650px;
-  content: '';
-  display: block;
 }
 
 .btmcon a::after {
+  content: '';
   position: absolute;
+  display: block;
   width: 36px;
   height: 40px;
   top: 23px;
   left: 412px;
   background: url("../img/objs_top_1.png") -2600px -650px;
-  content: '';
-  display: block;
 }
 
 .btmcon .steps {
@@ -2308,6 +2362,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin: 25px auto 0;
   width: 90%;
 }
@@ -2344,22 +2401,22 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .quick_w ul.free::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 120px;
   height: 120px;
   background: url("../img/objs_top_1.png") -1160px -900px;
-  display: block;
-  position: absolute;
   left: -10px;
   top: -80px;
 }
 
 .quick_w ul.free::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 96px;
   height: 80px;
   background: url("../img/objs_top_1.png") -1285px -915px;
-  display: block;
-  position: absolute;
   left: 10px;
   top: 10px;
   z-index: -1;
@@ -2377,22 +2434,22 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .quick_w ul.free li::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 24px;
   height: 20px;
   background: url("../img/objs_top_1.png") -1410px -905px;
-  display: block;
-  position: absolute;
   left: 20px;
   top: 20px;
 }
 
 .quick_w ul.free li::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 65px;
   height: 62px;
   background: url("../img/objs_top_1.png") -1408px -930px;
-  display: block;
-  position: absolute;
   left: 60px;
   top: -20px;
   z-index: -1;
@@ -2489,8 +2546,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 .quick_w .bee::before {
   width: 106px;
   height: 122px;
-  display: block;
   content: '';
+  position: absolute;
+  display: block;
   background: url("../img//objs_top_1.png") -1530px -650px;
   z-index: 2;
 }
@@ -2498,8 +2556,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 .quick_w .bee::after {
   width: 60px;
   height: 42px;
-  display: block;
   content: '';
+  position: absolute;
+  display: block;
   top: 48px;
   left: 20px;
   background: url("../img//objs_top_1.png") -1700px -650px;

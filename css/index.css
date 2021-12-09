@@ -75,6 +75,12 @@ header .hinner div nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 header .hinner div nav ul li {
@@ -91,6 +97,12 @@ header .hinner .gnb ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 header .hinner .gnb ul li {
@@ -111,6 +123,7 @@ header .hinner .gnb ul li:nth-of-type(1)::before {
 header .hinner .gnb ul li:nth-of-type(3)::after {
   content: '';
   position: absolute;
+  display: block;
   width: 12px;
   height: 8px;
   top: 10px;
@@ -300,6 +313,9 @@ footer .copy_w .inner .cs ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 20px;
@@ -320,6 +336,7 @@ footer .copy_w .inner .cs ul li span {
 footer .copy_w .inner .cs ul li span::after {
   content: '';
   position: absolute;
+  display: block;
   width: 1px;
   height: 10px;
   background: #424242;
@@ -341,9 +358,10 @@ footer .copy_w .inner .cs a.faq {
 
 footer .copy_w .inner .cs a.faq::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 5px;
   height: 9px;
-  position: absolute;
   background: url("../img/icons_layout.png") 0 -120px;
   top: 10px;
   left: 50px;
@@ -357,6 +375,9 @@ footer .copy_w .inner .cs ul.sns {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 footer .copy_w .inner .cs ul.sns li {
@@ -415,11 +436,11 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 
 .quick_top a::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 10px;
   height: 6px;
-  position: absolute;
   background: url("../img/icons_layout.png") 0 -80px;
-  display: block;
   left: 20px;
   top: 15px;
 }
@@ -960,9 +981,10 @@ main {
 
 .fun .inner .slide_w::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 100px;
   height: 100px;
-  position: absolute;
   top: -165px;
   right: 15%;
   background: url("../img/objs_char.png");
@@ -972,9 +994,10 @@ main {
 
 .fun .inner .slide_w::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 125px;
   height: 160px;
-  position: absolute;
   top: -90px;
   right: 30%;
   background: url("../img/objs_char.png") 0 -100px;
@@ -1030,13 +1053,17 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .fun .inner .slide_w .slide::before {
   content: '';
+  position: absolute;
+  display: block;
   width: 100px;
   height: 120px;
-  position: absolute;
   bottom: 135px;
   right: -75px;
   background: url("../img/objs_char.png") 0 -265px;
@@ -1044,9 +1071,10 @@ main {
 
 .fun .inner .slide_w .slide::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 175px;
   height: 155px;
-  position: absolute;
   bottom: 135px;
   left: -140px;
   background: url("../img/objs_char.png") 0 -385px;
@@ -1107,9 +1135,10 @@ main {
 
 .review_w .inner .txt::after {
   content: '';
+  position: absolute;
+  display: block;
   width: 443px;
   height: 92px;
-  position: absolute;
   top: 139px;
   right: 0;
   background: url("../img/img_review_friend.png");
@@ -1149,11 +1178,11 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   height: 100%;
 }
 
@@ -1164,6 +1193,9 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   width: 100%;
 }
 
@@ -1230,6 +1262,9 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1313,6 +1348,7 @@ main {
 .free_w .inner ul li::after {
   content: '';
   position: absolute;
+  display: block;
   border-left: 1px solid #e5e5e5;
   width: 100%;
   height: 100%;
