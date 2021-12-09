@@ -1360,6 +1360,109 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   position: absolute;
 }
 
+.contents .rcon_04 .inner .tit {
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+.contents .rcon_04 .inner .tit h3 {
+  font-size: 54px;
+  line-height: 75px;
+  font-weight: 700;
+  color: #000;
+}
+
+.contents .rcon_04 .inner .tit h3 span {
+  color: #2299ff;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_t ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 75px;
+  border-top: 1px solid #141414;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_t ul li {
+  display: inline-block;
+  height: 100%;
+  line-height: 73px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_t ul li:nth-of-type(1) {
+  width: 350px;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_t ul li:nth-of-type(2) {
+  width: 730px;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_c ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 75px;
+  border-bottom: 1px solid #e0e0e0;
+  height: 100%;
+  font-weight: 500;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_c ul li:hover {
+  color: #239aff;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_c ul li p.id {
+  width: 350px;
+  line-height: 74px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contents .rcon_04 .inner .rv_w .rv_c ul li p.con {
+  width: 730px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  font-weight: normal;
+  padding: 10px 0;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.contents .rcon_04 .inner .rv_w .btn_w {
+  padding: 45px 0 140px 0;
+  text-align: center;
+}
+
+.contents .rcon_04 .inner .rv_w .btn_w a {
+  display: inline-block;
+  width: 61px;
+  height: 61px;
+  font-size: 0;
+  margin: 0 8px;
+}
+
+.contents .rcon_04 .inner .rv_w .btn_w a.up {
+  background: url("../img/btn_review_up.png");
+}
+
+.contents .rcon_04 .inner .rv_w .btn_w a.down {
+  background: url("../img/btn_review_down.png");
+}
+
 .noti_w {
   background: #5b3606;
   height: 275px;
