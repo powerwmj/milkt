@@ -110,7 +110,7 @@ main {position: relative;}
             animation: cir 5s infinite linear;
         }
         .txt {
-            width: 50%;
+            width: 50%; opacity: 0; transform: translateY(50%); transition: 1s;
             h3 {font-size: 48px; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 40px;
                 span {color: #07a3ea;}
             }
@@ -129,14 +129,14 @@ main {position: relative;}
 .fun {
     .inner {
         position: relative; z-index: 1;
-        .txt {
+        .txt { opacity: 0; transform: translateY(50%); transition: 1s;
             h3 {font-size: 48px; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
                 span {color: #07a3ea;}
             }
             p {font-size: 19px; color: #898886; line-height: 34px; margin-bottom: 55px;}
         }
         .slide_w {
-            position: relative;
+            position: relative; opacity: 0; transform: translateY(50%); transition: 1s;
             &::before {@include ab_c; width: 100px; height: 100px; top: -165px; right: 15%; background: url('../img/objs_char.png'); animation: char 2s infinite linear;}
             &::after {@include ab_c; width: 125px; height: 160px; top: -90px; right: 30%; background: url('../img/objs_char.png') 0 -100px; z-index: -1;}
             @keyframes char {
@@ -150,7 +150,7 @@ main {position: relative;}
                 .next {right: 60px; background-position: 0 -60px;}
             }
             .slide {
-                @include flex(space-between, stretch);
+                @include flex(space-between, stretch); 
                 &::before {@include ab_c; width: 100px; height: 120px; bottom: 135px; right: -75px; background: url('../img/objs_char.png') 0 -265px;}
                 &::after {@include ab_c; width: 175px; height: 155px; bottom: 135px; left: -140px; background: url('../img/objs_char.png') 0 -385px; z-index: -1;}
                 li {
@@ -171,7 +171,7 @@ main {position: relative;}
 .review_w {
     margin-top: -230px; 
     .inner {position: relative;
-        .txt {
+        .txt { opacity: 0; transform: translateY(50%); transition: 1s; opacity: 0; transform: translateY(50%); transition: 1s;
             &::after {@include ab_c; width: 443px; height: 92px; top: 139px; right: 0; background: url('../img/img_review_friend.png');}
             h3 {font-size: 48px; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
                 span {color: #07a3ea;}
@@ -187,7 +187,7 @@ main {position: relative;}
         .inner {
             @include flex(space-around, center); height: 100%;
             ul {
-                @include flex(space-between, stretch); width: 100%;
+                @include flex(space-between, stretch); width: 100%; opacity: 0; transform: translateY(50%); transition: 1s; opacity: 0; transform: translateY(50%); transition: 1s;
                 li {
                     text-align: center;
                     .img {display: block; margin-bottom: 25px;}
@@ -203,13 +203,13 @@ main {position: relative;}
     .inner{
         padding: 120px 0;
         .tit {
-            margin-bottom: 40px;
+            margin-bottom: 40px; opacity: 0; transform: translateY(50%); transition: 1s;
             @include flex(space-between, center); width: 100%; height: 28px;
             h3 {font-size: 28px; line-height: 1; color: #181818;}
             a {display: inline-block; width: 36px; height: 36px; background: url('../img/icons.png') 0 -120px; font-size: 0;}
         }
         ul {
-            @include flex(space-between, stretch); flex-wrap: wrap;
+            @include flex(space-between, stretch); flex-wrap: wrap; opacity: 0; transform: translateY(50%); transition: 1s;
             li {
                 padding: 35px 0; @include flex(space-between, center); width: 30%; border-bottom: 1px solid #e5e5e5;
                 .txt {
@@ -230,11 +230,11 @@ main {position: relative;}
     .inner {
         padding-bottom: 120px;
         .txt {
-            margin-bottom: 65px;
+            margin-bottom: 65px; opacity: 0; transform: translateY(50%); transition: 1s;
             h3 {font-size: 28px; line-height: 1; color: #181818;}
         }
         ul {
-            @include flex(space-between, center);overflow: hidden;
+            @include flex(space-between, center);overflow: hidden; opacity: 0; transform: translateY(50%); transition: 1s;
             li {
                 width: 20%; height: 100%; text-align: center; position: relative;
                 &::after {@include ab_c; border-left: 1px solid #e5e5e5; width: 100%; height: 100%; top: 0; left: -38px; z-index: -1;}
@@ -261,7 +261,7 @@ main {position: relative;}
             .slide {
                 position: relative; height: 100%;
                 .txt_w {
-                    color: #fff; z-index: 2; position: absolute; left: calc(50% - 500px);
+                    color: #fff; z-index: 2; position: absolute; left: 5%;
                     h2 {
                         font-size: 5rem; line-height: 6rem; font-weight: 700;
                         span {color: #fff839;}
@@ -269,13 +269,14 @@ main {position: relative;}
                     p {font-size: 1.5rem; line-height: 2rem; margin-top: 3rem;}
                 }
                 .img_w {
-                    position: absolute; left: calc(50% - 10rem); top: 0; animation: visual 2s infinite ease-in-out;
-                    span {display: inline-block; width: 390px; height: 50px; position: absolute; bottom: 65px; left: 50%; transform: translateX(-50%);
+                    position: absolute; left: 17rem; top: 4em; animation: visual 2s infinite ease-in-out; width: 60%;
+                    img {width: 100%;}
+                    span {display: inline-block; width: 15rem; height: 2.5rem; position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
                     animation: twink 1.5s infinite ease-in-out;} z-index: 1;
                 }
                 @keyframes visual {
-                    50% {top: -35px;}
-                    100% {top: 0px;}
+                    50% {top: 2em;}
+                    100% {top: 4em;}
                 }
                 @keyframes twink {
                     50% {opacity: 0;}
@@ -315,13 +316,13 @@ main {position: relative;}
     }
 
     .obj_w {
-        position: relative; width: 100%; height: 900px;
+        position: relative; width: 100%; height: 900px; display: none;
         div {position: absolute;}
         .obj_1 {width: 580px; height: 580px; background: url('../img/objs_top.png'); left: 80%; top: -750px; z-index: 3; animation: obj1 6s infinite linear; visibility: hidden;}
         .obj_2 {width: 320px; height: 320px; background: url('../img/objs_top.png') 0 -580px; right: 0; top: -300px; z-index: 4; animation: obj2 15s infinite linear;}
         .obj_3 {width: 270px; height: 270px; background: url('../img/objs_top.png') 0 -900px; left: 70%; top: 0; z-index: 3; animation: obj3 5s infinite linear;}
         .obj_4 {width: 365px; height: 330px; background: url('../img/objs_top.png') 0 -1170px; left: 80%; top: -25px; z-index: 4; animation: obj4 10s infinite linear; visibility: hidden;}
-        .obj_5 {width: 210px; height: 210px; background: url('../img/objs_top.png') 0 -1500px; left: 85%; bottom: 100px; z-index: 3; animation: obj5 10s infinite linear;}
+        .obj_5 {width: 210px; height: 210px; background: url('../img/objs_top.png') 0 -1500px; left: 85%; bottom: 100px; z-index: 3; animation: obj5 10s infinite linear; visibility: hidden;}
         .obj_6 {width: 340px; height: 340px; background: url('../img/objs_top.png') 0 -1710px; left: -50px; bottom: 300px; animation: obj6 10s infinite linear; visibility: hidden;}
         .obj_7 {width: 370px; height: 250px; background: url('../img/objs_top.png') 0 -2050px; left:  -17%; top: -150px;}
         .obj_8 {width: 365px; height: 330px; background: url('../img/objs_top.png') 0 -2300px; left: 0; top: -75px; animation: obj8 8s infinite linear;}
@@ -355,20 +356,20 @@ main {position: relative;}
     }
 
     .free_trial {
-        margin-top: -700px; margin-bottom: 100px; position: relative; z-index: 5;
+        margin-top: 0; position: relative; z-index: 5;
         .inner {
-            display: flex;
+            display: flex; padding: 0 5%;
             >div:nth-of-type(1){
                 clip-path: path('M473.57,236.69c-10.85,129.61-106.14,222.03-235.5,235.5c-134.5,14-257.5-105-235.5-235.5c21.62-128.25,112-222.5,235.5-235.5C381.31-13.89,483.57,117.19,473.57,236.69z');
-                animation: cir 5s infinite linear;
+                animation: cir 5s infinite linear; width: 65%; transform: scale(0.65) translate(-25%, -25%);
             }
             .txt {
-                width: 50%;
-                h3 {font-size: 3rem; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 40px;
+                width: 55%; margin-left: -7rem;
+                h3 {font-size: 2.5rem; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 40px;
                     span {color: #07a3ea;}
                 }
                 p {font-size: 1.25rem; color: #898886; line-height: 34px; margin-bottom: 55px;}
-                a {display: block; width: 215px; height: 55px; border: 1px solid #17a3e3; border-radius: 55px; text-align: center; color: #07a3ea; font-size: 20px; line-height: 53px;}
+                a {display: block; width: 215px; height: 55px; border: 1px solid #17a3e3; border-radius: 55px; text-align: center; color: #07a3ea; font-size: 1.25rem; line-height: 53px;}
             }
         }
     }
@@ -380,10 +381,11 @@ main {position: relative;}
     }
 
     .fun {
+        margin-top: -10rem;
         .inner {
             position: relative; z-index: 1; width: 100%; padding: 0 5%;
             .txt {
-                h3 {font-size: 3rem; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
+                h3 {font-size: 2.5rem; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
                     span {color: #07a3ea;}
                 }
                 p {font-size: 1.25rem; color: #898886; line-height: 34px; margin-bottom: 55px;}
@@ -449,6 +451,7 @@ main {position: relative;}
                         strong {font-size: 20px; color: #fff; font-weight: 500; margin-bottom: 20px; display: block;}
                         p {font-size: 16px; color: #dadada; line-height: 30px;}
                     }
+                    li:nth-of-type(3) {display: none;}
                 }
             }
         }
@@ -489,9 +492,9 @@ main {position: relative;}
                 h3 {font-size: 28px; line-height: 1; color: #181818;}
             }
             ul {
-                @include flex(space-between, center);overflow: hidden;
+                display:block; overflow: hidden;
                 li {
-                    width: 20%; height: 100%; text-align: center; position: relative;
+                    width: 45%; height: 100%; text-align: center; position: relative; display: inline-block; margin-bottom: 3rem;
                     &::after {@include ab_c; border-left: 1px solid #e5e5e5; width: 100%; height: 100%; top: 0; left: -38px; z-index: -1;}
                     a {
                         width: 100%; height: 100%; color: inherit; outline: 1px solid #f00;
@@ -503,6 +506,7 @@ main {position: relative;}
                         span {display: block; font-size: 15px; color: #9f9f9f;}
                     }
                 }
+                li:nth-of-type(3), li:nth-of-type(4) {margin-bottom: 0;}
             }
         }
     }
@@ -511,41 +515,42 @@ main {position: relative;}
 @media screen and (max-width: 767px) {
     main {position: relative;}
     .m_visual {
-        width: 100%; min-height: 900px; background: #239aff;
+        width: 100%; min-height: 45rem; background: #239aff;
         .inner {
             padding: 150px 0; height: 100%;
             .slide {
                 position: relative; height: 100%;
                 .txt_w {
-                    color: #fff; z-index: 2; position: absolute; left: calc(50% - 500px);
+                    color: #fff; z-index: 2; position: absolute; left: 5%;
                     h2 {
-                        font-size: 4rem; line-height: 5rem; font-weight: 700;
+                        font-size: 2.5rem; line-height: 5rem; font-weight: 700;
                         span {color: #fff839;}
                     }
-                    p {font-size: 1.5rem; line-height: 2rem; margin-top: 3rem;}
+                    p {font-size: 1.15rem; line-height: 2rem; margin-top: 3rem;}
                 }
                 .img_w {
-                    position: absolute; left: calc(50% - 10rem); top: 0; animation: visual 2s infinite ease-in-out;
-                    span {display: inline-block; width: 390px; height: 50px; position: absolute; bottom: 65px; left: 50%; transform: translateX(-50%);
+                    position: absolute; left: 10rem; top: 10rem; width: 50%; animation: visual 2s infinite ease-in-out;
+                    img {width: 100%;}
+                    span {display: none; width: 60%; height: 50px; position: absolute; bottom: 0rem; left: 50%; transform: translateX(-50%);
                     animation: twink 1.5s infinite ease-in-out;} z-index: 1;
                 }
                 @keyframes visual {
-                    50% {top: -35px;}
-                    100% {top: 0px;}
+                    50% {top: 7rem;}
+                    100% {top: 10rem;}
                 }
                 @keyframes twink {
                     50% {opacity: 0;}
                     100% {opacity: 1;}
                 }
                 .paging {
-                    position: absolute; z-index: 10; transform: rotate(0); width: 300px; height: 36px; left: 40px; top: 500px; 
+                    position: absolute; z-index: 10; transform: rotate(0); width: 200px; height: 36px; left: 40px; top: 28rem; 
                     ul {
                         display: flex;
                         li {
                             a {color: #fff; display: block; line-height: 1; padding: 10px;}
                             a.prev {width: 15px; height: 15px; font-size: 0; background: url('../img/icons.png'); transform: rotate(-90deg); margin-top: 8px;}
                             a.next {width: 15px; height: 15px; font-size: 0; background: url('../img/icons.png') 0 -15px; transform: rotate(-90deg); margin-top: 8px;}
-                            span.bar {width: 90px; height: 1px; background: rgba(255,255,255,.5); display: inline-block;}
+                            span.bar {width: 2.5rem; height: 1px; background: rgba(255,255,255,.5); display: inline-block;}
                             span.bar.on {background: rgba(255,255,255,1);}
                         }
                         li.play{
@@ -561,9 +566,9 @@ main {position: relative;}
     .wave {
         animation: wave 8s infinite linear; 
         height: 300px;
-        position: absolute; top: 810px; width: 100%; z-index: 0; 
+        position: absolute; top: 40rem; width: 100%; z-index: 0; 
         background: url('../img/wave.svg') 0 0 repeat-x;
-        background-size: 50%;
+        background-size: 85%;
 
     }
     @keyframes wave {
@@ -571,7 +576,7 @@ main {position: relative;}
     }
 
     .obj_w {
-        position: relative; width: 100%; height: 900px;
+        position: relative; width: 100%; height: 50rem; display: none;
         div {position: absolute;}
         .obj_1 {width: 580px; height: 580px; background: url('../img/objs_top.png'); left: 80%; top: -750px; z-index: 3; animation: obj1 6s infinite linear; visibility: hidden;}
         .obj_2 {width: 320px; height: 320px; background: url('../img/objs_top.png') 0 -580px; right: 0; top: -300px; z-index: 4; animation: obj2 15s infinite linear; visibility: hidden;}
@@ -611,20 +616,22 @@ main {position: relative;}
     }
 
     .free_trial {
-        margin-top: -700px; margin-bottom: 100px; position: relative; z-index: 5;
+        margin-top: 0; margin-bottom: 5rem; position: relative; z-index: 5; width: 100%;
         .inner {
-            display: block; width: 100%; padding: 0 5%;
+            display: block; width: 100%; padding: 0 5%; overflow: hidden;
             >div:nth-of-type(1){
+                margin-bottom: 3rem;
                 clip-path: path('M473.57,236.69c-10.85,129.61-106.14,222.03-235.5,235.5c-134.5,14-257.5-105-235.5-235.5c21.62-128.25,112-222.5,235.5-235.5C381.31-13.89,483.57,117.19,473.57,236.69z');
-                animation: cir 5s infinite linear;
+                animation: cir 5s infinite linear; width: 200%; transform: scale(0.6) translate(-30%, -35%);
+                img {width: 100%;}
             }
             .txt {
-                width: 100%;
-                h3 {font-size: 3rem; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 40px;
+                width: 100%; margin-top: -100%;
+                h3 {font-size: 2rem; color: #181818; line-height: 1.6; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 40px;
                     span {color: #07a3ea;}
                 }
-                p {font-size: 19px; color: #898886; line-height: 34px; margin-bottom: 55px;}
-                a {display: block; width: 215px; height: 55px; border: 1px solid #17a3e3; border-radius: 55px; text-align: center; color: #07a3ea; font-size: 20px; line-height: 53px;}
+                p {font-size: 1.15rem; color: #898886; line-height: 1.6; margin-bottom: 55px;}
+                a {display: block; width: 215px; height: 55px; border: 1px solid #17a3e3; border-radius: 55px; text-align: center; color: #07a3ea; font-size: 1.25rem; line-height: 53px;}
             }
         }
     }
@@ -635,25 +642,26 @@ main {position: relative;}
         100% {clip-path: path('M473.57,236.69c-10.85,129.61-106.14,222.03-235.5,235.5c-134.5,14-257.5-105-235.5-235.5c21.62-128.25,112-222.5,235.5-235.5C381.31-13.89,483.57,117.19,473.57,236.69z');}
     }
 
-    .fun {
+    .fun { 
+        width: 100%;
         .inner {
-            position: relative; z-index: 1; width: 100%; padding: 0 5%;
+            position: relative; z-index: 1; padding: 0 5%;
             .txt {
-                h3 {font-size: 3rem; color: #181818; line-height: 65px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
+                h3 {font-size: 2rem; color: #181818; line-height: 1.6; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 40px;
                     span {color: #07a3ea;}
                 }
-                p {font-size: 1.25rem; color: #898886; line-height: 34px; margin-bottom: 55px;}
+                p {font-size: 1.15rem; color: #898886; line-height: 1.6; margin-bottom: 55px;}
             }
             .slide_w {
                 position: relative;
-                &::before {@include ab_c; width: 100px; height: 100px; top: -165px; right: 15%; background: url('../img/objs_char.png'); animation: char 2s infinite linear;}
-                &::after {@include ab_c; width: 125px; height: 160px; top: -90px; right: 30%; background: url('../img/objs_char.png') 0 -100px; z-index: -1;}
+                &::before {@include ab_c; width: 100px; height: 100px; top: -16rem; right: 0%; background: url('../img/objs_char.png'); animation: char 2s infinite linear;}
+                &::after {@include ab_c; width: 125px; height: 160px; top: -90px; right: 20%; background: url('../img/objs_char.png') 0 -100px; z-index: -1;}
                 @keyframes char {
-                    50% {top: -145px;}
-                    100% {top: -165px;}
+                    50% {top: -15rem;}
+                    100% {top: -16rem;}
                 }
                 .arrow {
-                    position: relative;
+                    position: relative; display: none;
                     a {display: inline-block; position: absolute; width: 14px; height: 25px; top: -80px; background: url('../img/icons.png'); font-size: 0;}
                     .prev {right: 105px; background-position: 0 -90px;}
                     .next {right: 60px; background-position: 0 -60px;}
@@ -664,7 +672,7 @@ main {position: relative;}
                     &::after {@include ab_c; width: 175px; height: 155px; bottom: 135px; left: -50px; background: url('../img/objs_char.png') 0 -385px; z-index: -1;}
                     li {
                         width: 100%; text-align: center; margin-bottom: 2rem;
-                        .img {padding: 2rem; border: 3px solid #eef5fb; border-radius: 1.5rem; background: #fff; display: block; margin-bottom: 2rem;}
+                        .img {padding: 0.75rem; border: 3px solid #eef5fb; border-radius: 0.75rem; background: #fff; display: block; margin-bottom: 2rem;}
                         .img img {width: 100%;}
                         strong {font-size: 1.5rem; color: #181818; font-weight: 500; margin-bottom: 1rem; display: block;}
                         p {font-size: 1rem; color: #898886; line-height: 30px;}
@@ -680,57 +688,59 @@ main {position: relative;}
     }
 
     .review_w {
-        margin-top: -22rem; 
-        .inner {position: relative; width: 100%; padding: 0 5%;
+        margin-top: -22rem; width: 100%;
+        .inner {position: relative; padding: 0 5%;
             .txt {
-                &::after {@include ab_c; width: 443px; height: 92px; top: 14    rem; right: 0; background: url('../img/img_review_friend.png');}
-                h3 {font-size: 3rem; color: #181818; line-height: 3.5rem; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 2.5rem;
+                &::after {display: none;}
+                h3 {font-size: 2rem; color: #181818; line-height: 1.6; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 2.5rem;
                     span {color: #07a3ea;}
                 }
                 p {
-                    font-size: 1.25rem; color: #898886; line-height: 34px; margin-bottom: 6rem;
+                    font-size: 1.15rem; color: #898886; line-height: 1.6; margin-bottom: 3rem;
                     span {color: #07a3ea;}
                 }
             }
         }
         .review {
-            width: 100%; height: 600px; background: url('../img/bg_review.png') center no-repeat; 
+            width: 100%; height: 33rem; background: url('../img/bg_review.png') center no-repeat; 
             .inner {
-                @include flex(space-around, center); height: 100%;
+                @include flex(space-around, center); height: 100%; width: 100%; padding: 0 5%;
                 ul {
-                    @include flex(space-between, stretch); width: 100%;
+                    display: block; width: 100%;
                     li {
-                        text-align: center;
+                        text-align: center; display: none;
                         .img {display: block; margin-bottom: 25px;}
                         strong {font-size: 20px; color: #fff; font-weight: 500; margin-bottom: 20px; display: block;}
                         p {font-size: 16px; color: #dadada; line-height: 30px;}
                     }
+                    li:nth-of-type(1) {display: block;}
                 }
             }
         }
     }
 
     .noti_w {
+        width: 100%;
         .inner{
-            padding: 6rem 5%; width: 100%; 
+            padding: 6rem 5%; 
             .tit {
-                margin-bottom: 40px;
-                @include flex(space-between, center); width: 100%; height: 28px;
-                h3 {font-size: 28px; line-height: 1; color: #181818;}
-                a {display: inline-block; width: 36px; height: 36px; background: url('../img/icons.png') 0 -120px; font-size: 0;}
+                margin-bottom: 2.2rem;
+                @include flex(space-between, center); width: 100%; height: 1.6rem;
+                h3 {font-size: 1.6rem; line-height: 1; color: #181818;}
+                a {display: inline-block; width: 2.25rem; height: 2.25rem; background: url('../img/icons.png') 0 -120px; font-size: 0;}
             }
             ul {
                 @include flex(space-between, stretch); flex-wrap: wrap;
                 li {
-                    padding: 2rem 0; @include flex(space-between, center); width: 100%; border-bottom: 1px solid #e5e5e5;
+                    padding: 1.25rem 0; @include flex(space-between, center); width: 100%; border-bottom: 1px solid #e5e5e5;
                     .txt {
                         width: 75%;
-                        a {font-size: 17px; line-height: 28px; word-break: break-all; color: #181818;}
+                        a {font-size: 1.1rem; line-height: 1.6; word-break: break-all; color: #181818;}
                     }
                     .date {
                         color: #07a3ea; text-align: center; width: 25%;
-                        .d {font-size: 30px; font-weight: 700;}
-                        .ym {font-size: 13px; font-weight: 400;}
+                        .d {font-size: 1.75rem; font-weight: 700;}
+                        .ym {font-size: .875rem; font-weight: 400;}
                     }
                 }
             }
@@ -738,16 +748,17 @@ main {position: relative;}
     }
 
     .free_w {
+        
         .inner {
-            padding: 0 5% 120px 5%; width: 100%;
+            padding: 0 5% 6rem 5%; width: 100%;
             .txt {
-                margin-bottom: 65px;
-                h3 {font-size: 28px; line-height: 1; color: #181818;}
+                margin-bottom: 4rem;
+                h3 {font-size: 1.6rem; line-height: 1; color: #181818;}
             }
             ul {
                 @include flex(space-between, center); flex-wrap: wrap; overflow: hidden;
                 li {
-                    width: 40%; height: 100%; text-align: center; position: relative; margin-bottom: 3rem;
+                    width: 100%; height: 100%; text-align: center; position: relative; margin-bottom: 3rem;
                     &::after {@include ab_c; border-left: 1px solid #e5e5e5; width: 100%; height: 100%; top: 0; left: -38px; z-index: -1;}
                     a {
                         width: 100%; height: 100%; color: inherit; outline: 1px solid #f00;
@@ -759,7 +770,7 @@ main {position: relative;}
                         span {display: block; font-size: 15px; color: #9f9f9f;}
                     }
                 }
-                li:nth-of-type(3),li:nth-of-type(4) {margin-bottom: 0;}
+                li:nth-of-type(4) {margin-bottom: 0;}
             }
         }
     }

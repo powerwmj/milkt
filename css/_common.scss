@@ -16,7 +16,7 @@ table {border-collapse: collapse;}
     justify-content: $jc;//flex-start
     align-items: $ai; //stretch
 }
-@mixin inner {width: 1080px; margin: 0 auto;}
+@mixin inner($w, $m) {width: $w; margin: $m;}
 
 @mixin ab_c {content: ''; position: absolute; display: block;}
 
@@ -26,7 +26,7 @@ $c_blue2 : #1595df;
 $d_black : #180e07;
 
 
-.inner {@include inner;}
+.inner {@include inner(1080px, 0 auto);}
 
 header {
     width: 100%; height: 100px; position: absolute; z-index: 1;
@@ -175,7 +175,10 @@ footer {
     }
 }
 
+.active {opacity: 1 !important; transform: translateY(0) !important;}
+
 @media screen and (min-width: 768px) and (max-width: 1100px) {
+    .inner {@include inner(100%, 0 auto);}
     header {
         width: 100%; height: 100px; position: absolute; z-index: 1;
         .hinner {
@@ -253,13 +256,13 @@ footer {
         width: 100%;
         .f_menu {
             width:100%; height: 4.5rem; border-top: 1px solid #e5e5e5; 
-            .inner {width: 100%; padding: 0 5%;}
+            .inner {padding: 0 5%;}
             ul {
                 @include flex(flex-start, center); height: 100%;
                 li {
-                    &::after {content: '·'; width: 40px; text-align: center; color: #ccc; display: inline-block;}
+                    &::after {content: '·'; width: 2.5rem; text-align: center; color: #ccc; display: inline-block;}
                     &:nth-of-type(5)::after {content: ''; width: 0;}
-                    a {font-size: 15px; color: #181818; line-height: 69px;}
+                    a {font-size: 0.9rem; color: #181818; line-height: 4.5;}
                     a.bold {font-weight: 700;}
                 }
             }
@@ -267,12 +270,12 @@ footer {
         .copy_w {
             width: 100%; height: inherit; background: #2d2d2d; padding: 0 5%;
             .inner {
-                height: 100%; display: unset; width: 90%; padding: 0 5%;
+                height: 100%; display: block; width: 100%; padding: 0;
                 .copy {
                     padding-top: 3rem; position: relative;
                     strong {display: block; font-size: 0; width: 160px; height: 42px; background: url('../img/icons_layout.png') -120px 0; margin-bottom: 30px;}
                     p {
-                        font-size: 0.875rem; color: #6e6e6e; line-height: 27px;
+                        font-size: 0.875rem; color: #6e6e6e; line-height: 1.6;
                         span {color: #d2d2d2;}
                         small {font-size: 0.625rem; color: #6e6e6e; margin-top: 12px; display: block;}
                     }
@@ -318,7 +321,7 @@ footer {
     }
     
     .quick_top {
-        position: fixed; z-index: 6; top: calc(100% - 150px); right: calc((100% - 1080px) / 2 - 109px); transition: opacity .3s; //opacity: 0;
+        position: fixed; z-index: 6; top: calc(100% - 150px); right: 1em; transition: opacity .3s; //opacity: 0;
         a {
             display: block; position: relative; width: 55px; height: 55px; padding-top: 27px; border-radius: 28px; font-size: 14px; font-weight: 700; color: $c_white; background-color: #239aff; text-align: center;
             &::before {@include ab_c; width: 10px; height: 6px; background: url('../img/icons_layout.png') 0 -80px; left: 20px; top: 15px;}
@@ -328,6 +331,7 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    .inner {@include inner(100%, 0 auto);}
     header {
         width: 100%; height: 100px; position: absolute; z-index: 1;
         .hinner {
@@ -404,34 +408,35 @@ footer {
     footer {
         width: 100%;
         .f_menu {
-            width:100%; height: 4.5rem; border-top: 1px solid #e5e5e5; 
-            .inner {width: 100%; padding: 0 5%;}
+            width:100%; height: inherit; border-top: 1px solid #e5e5e5; 
+            .inner {padding: 0 5%;}
             ul {
-                @include flex(flex-start, center); height: 100%;
+                display: block; height: 100%; text-align: center;
                 li {
-                    &::after {content: '·'; width: 40px; text-align: center; color: #ccc; display: inline-block;}
+                    &::after {content: '·'; width: 2rem; text-align: center; color: #ccc; display: inline-block;}
                     &:nth-of-type(5)::after {content: ''; width: 0;}
-                    a {font-size: 15px; color: #181818; line-height: 69px;}
+                    display: inline-block;
+                    a {font-size: 0.9rem; color: #181818; line-height: 2.5rem;}
                     a.bold {font-weight: 700;}
                 }
             }
         }
         .copy_w {
-            width: 100%; height: inherit; background: #2d2d2d; padding: 0 5%;
+            height: inherit; background: #2d2d2d;
             .inner {
-                height: 100%; display: unset; width: 90%; padding: 0 5%;
+                height: 100%; display: unset; width: 100%; padding: 0 5%;
                 .copy {
-                    padding-top: 3rem; position: relative;
+                    padding-top: 1.5rem; position: relative; padding: 10% 5% 0 5%;
                     strong {display: block; font-size: 0; width: 160px; height: 42px; background: url('../img/icons_layout.png') -120px 0; margin-bottom: 30px;}
                     p {
-                        font-size: 0.875rem; color: #6e6e6e; line-height: 27px;
+                        font-size: 0.85rem; color: #6e6e6e; line-height: 1.5;
                         span {color: #d2d2d2;}
-                        small {font-size: 0.625rem; color: #6e6e6e; margin-top: 12px; display: block;}
+                        small {font-size: 0.625rem; color: #6e6e6e; margin-top: .8em; display: block;}
                     }
-                    .awards {position: absolute; width: 73px; height: 75px; bottom: 15px; right: 0;}
+                    .awards {position: absolute; width: 73px; height: 75px; bottom: 15px; right: 0; display: none;}
                 }
                 .cs {
-                    width: 100%; height: 100%; background: #282828; padding: 1rem ; margin-top: 2rem;
+                    width: 100%; height: 100%; background: #282828; padding: 5%; margin-top: 2rem;
                     dl{
                         margin-top: 1.5rem;
                         dt {font-size: 1.125rem; color: $c_white;}
@@ -440,7 +445,7 @@ footer {
                     ul {
                         @include flex(space-between, stretch); flex-wrap: wrap; margin-bottom: 20px;
                         li {
-                            width: 50%; color: #878787; font-size: 0.875rem;
+                            width: 50%; color: #878787; font-size: 0.875rem; line-height: 1.6;
                             span {
                                 display: inline-block; width: 60px; position: relative;
                                 &::after {@include ab_c; width: 1px; height: 10px; background: #424242; top: 5px; right: 5px;}
@@ -470,9 +475,9 @@ footer {
     }
     
     .quick_top {
-        position: fixed; z-index: 6; top: calc(100% - 150px); right: calc((100% - 1080px) / 2 - 109px); transition: opacity .3s; //opacity: 0;
+        position: fixed; z-index: 6; top: calc(100% - 150px); right: 1em; transition: opacity .3s; //opacity: 0;
         a {
-            display: block; position: relative; width: 55px; height: 55px; padding-top: 27px; border-radius: 28px; font-size: 14px; font-weight: 700; color: $c_white; background-color: #239aff; text-align: center;
+            display: block; position: relative; width: 55px; height: 55px; padding-top: 1.5rem; border-radius: 28px; font-size: 0.9rem; font-weight: 700; color: $c_white; background-color: #239aff; text-align: center;
             &::before {@include ab_c; width: 10px; height: 6px; background: url('../img/icons_layout.png') 0 -80px; left: 20px; top: 15px;}
         }
     }

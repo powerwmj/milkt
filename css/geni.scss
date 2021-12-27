@@ -148,3 +148,187 @@
     15% {transform: rotate(10deg); margin-top: -5px; margin-left: 10px;}
     20% {transform: rotate(0); margin-top: 0; margin-left: 0;}
 }
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .contents { 
+        .geni_v {
+            width: 100%; height: 732px; position: relative; margin: 0 auto;
+            .left {
+                position: absolute; left: 0; top: 0; width: 30%; height: 732px; overflow: hidden;
+                .l_bg {width: 100%; height: 100%; background: url('../img/bg_visual_01.jpg') no-repeat; transform: scale(1.2); animation: gv1 1s forwards linear;}
+            }
+            .right {
+                position: absolute; right: 0; top: 0; width: 70%; height: 732px; background: url('../img/bg_visual_02.jpg') no-repeat; overflow: hidden;
+                .light {position: absolute; width: 1579px; height: 966px; background: url('../img/obj_light.png') no-repeat center top; bottom: -400px; left: 0px; animation: bg02 2s infinite ease-in alternate-reverse;}
+                .robo_w {
+                    position: absolute;
+        bottom: -50px; left: 12rem; width: 580px; height: 396px; transform: rotate(-8deg);
+        animation: robowrap 3s infinite ease-in normal; z-index: 2;
+                    .robo_1 {position: absolute; left: 0; width: 580px; height: 396px; background: url('../img/obj_genia_body.png') no-repeat center top; background-size: 100%; z-index: 3;}
+                    .robo_2 {position: absolute; top: 190px; left: 230px; width: 21px; height: 33px; background: url('../img/obj_eye01.png') no-repeat 0 0; background-size: 100%; z-index: 3;}
+                    .robo_3 {position: absolute; animation: eye 3s infinite ease-in normal; top: 188px; left: calc(230px + 80px ); width: 30px; height: 34px; background: url('../img/obj_eye02.png') no-repeat 0 0; background-size: 100%; z-index: 3;}
+                    .robo_4 {position: absolute; top: -10px; left: calc(50% - 200px); width: 69px; height: 108px; background-image: url('../img/obj_genia_left.png');  z-index: 2; animation: leftear 3s infinite ease-in normal; background-size: 100%;}
+                    .robo_5 {position: absolute; top: -10px; left: calc(50% + 125px); width: 69px; height: 108px; background-image: url('../img/obj_genia_right.png'); z-index: 2; animation: rightear 3s infinite ease-in normal; background-size: 100%;}
+                }
+            }
+            .tit_box {
+                z-index: 1; position: absolute; left: 50%; top: 200px; width: 685px; height: 202px; margin-left: -410px;
+                .dot_box {position: absolute; left: 0; bottom: 33px; display: inline-block; animation: gv2 2.1s forwards linear; transform: translateZ(0); z-index: 1;}
+                .dot_box .dot {position: absolute; width: 31px; height: 33px; background: #6900ff; display: inline-block; animation: gv3 2.1s forwards linear; transform: translateZ(0) scale(0);}
+                .text {position: absolute; bottom: 0; animation: text 1050ms 2 ease-in; transform: translatez(0);}
+                .text_g {left: 0; transform: translate3d(0, 0, 0); animation: text-g 1050ms ease-in forwards; bottom: -47px;}
+                .text_e {left: 141px; animation-delay: 150ms;}
+                .text_n {left: 266px; animation-delay: 230ms;}
+                .text_i {left: 404px; animation-delay: 310ms;}
+                .text_a {left: 471px; animation-delay: 390ms;}
+            }
+            .txt1 {position: absolute; left: 50%; margin-left: -780px; top: 250px; animation: fadeInUp 1s 2s ease backwards;}
+            .txt2 {position: absolute; right: 50%; margin-right: -780px; top: 250px; animation: fadeInUp 1s 2s ease backwards; display: none;}
+            .txt3 {position: absolute; left: 50%; margin-left: -410px; top: 180px; animation: fadeInUp 1s 2s ease backwards;}
+            .txt4 {position: absolute; left: 50%; margin-left: -258px; top: 457px; animation: fadeInUp 1s 2s ease backwards;}
+        }
+        .geni_tab {
+            width: 100%; height: 82px; background: #000; text-align: center; margin-bottom: 61px;
+            ul {
+                width: 100%; height: 100%; margin: 0 auto; @include flex(space-around, center);
+                li {
+                    position: relative; width: 33.33%;
+                    a {position:absolute; z-index: 3; transform: translate(-50%,-50%);}
+                    a img {width: 100%;}
+                    
+                }
+                li.on{
+                    
+                    &::after {@include ab_c; width: 100%; height: 143px; background: url('../img/tab_on.png') center center; left: 50%; top: -41px; transform: translateX(-50%); z-index: 1;}
+                }
+            }
+        }
+    
+        .sec_kids {
+            width: 100%; margin: 0 auto; position: relative; padding-top: 100px; text-align: center;
+            &::before {@include ab_c; width: 338px; height: 707px; top: 25px; right: 0; background: url('../img/bg_ele_01.png');}
+            &::after {@include ab_c; width: 252px; height: 677px; top: 797px; left: 0; background: url('../img/bg_ele_02.png');}
+            img {width: 100%;}
+        }
+        .sec_kids2 {
+            padding-top: 10rem;
+            .container {width: 100%; margin: 0 auto; text-align: center;}
+            .container img {width: 90%;}
+            .slide_w {
+                margin: 5rem auto; width: 100%; text-align: center; position: relative;
+                .slide{
+                    position: relative;
+                    &::after{@include ab_c; width: 35%; height: 35%; bottom: 50px; left: 60%; background: url('../img/genia_03.png'); background-size: contain;}
+                }
+                .slide ul {@include flex(space-around, center); flex-wrap: wrap;}
+                .slide ul li {display: none;}
+                .slide ul li:nth-of-type(2) {display: block;}
+                .slide ul li:nth-of-type(2) img {width: 100%}
+                .arrow {
+                    position: absolute; top: 45%; width: 100%;
+                    .prev {left: 5%; font-size: 0; width: 63px; height: 63px; background: url('../img/btn_left.png'); display: inline-block; position: absolute;}
+                    .next {right: 5%; font-size: 0; width: 63px; height: 63px; background: url('../img/btn_right.png'); display: inline-block;position: absolute;}
+                }
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contents { 
+        .geni_v {
+            width: 100%; height: 732px; position: relative; margin: 0 auto;
+            .left {
+                position: absolute; left: 0; top: 0; width: 30%; height: 732px; overflow: hidden;
+                .l_bg {width: 100%; height: 100%; background: url('../img/bg_visual_01.jpg') no-repeat; transform: scale(1.2); animation: gv1 1s forwards linear;}
+            }
+            .right {
+                position: absolute; right: 0; top: 0; width: 70%; height: 732px; background: url('../img/bg_visual_02.jpg') no-repeat; overflow: hidden;
+                .light {position: absolute; width: 1579px; height: 966px; background: url('../img/obj_light.png') no-repeat center top; bottom: -400px; left: 0px; animation: bg02 2s infinite ease-in alternate-reverse;}
+                .robo_w {
+                    position: absolute;
+        bottom: -50px; left: 2rem; width: 580px; height: 396px; transform: rotate(-8deg);
+        animation: robowrap 3s infinite ease-in normal; z-index: 2;
+                    .robo_1 {position: absolute; left: 0; width: 580px; height: 396px; background: url('../img/obj_genia_body.png') no-repeat center top; background-size: 100%; z-index: 3;}
+                    .robo_2 {position: absolute; top: 190px; left: 230px; width: 21px; height: 33px; background: url('../img/obj_eye01.png') no-repeat 0 0; background-size: 100%; z-index: 3;}
+                    .robo_3 {position: absolute; animation: eye 3s infinite ease-in normal; top: 188px; left: calc(230px + 80px ); width: 30px; height: 34px; background: url('../img/obj_eye02.png') no-repeat 0 0; background-size: 100%; z-index: 3;}
+                    .robo_4 {position: absolute; top: -10px; left: calc(50% - 200px); width: 69px; height: 108px; background-image: url('../img/obj_genia_left.png');  z-index: 2; animation: leftear 3s infinite ease-in normal; background-size: 100%;}
+                    .robo_5 {position: absolute; top: -10px; left: calc(50% + 125px); width: 69px; height: 108px; background-image: url('../img/obj_genia_right.png'); z-index: 2; animation: rightear 3s infinite ease-in normal; background-size: 100%;}
+                }
+            }
+            .tit_box {
+                z-index: 1; position: absolute; left: 5%; top: 10em; width: 75%; height: 30%; margin-left: 0;
+                .dot_box {position: absolute; left: 0; bottom: 33px; display: inline-block; animation: gv2 2.1s forwards linear; transform: translateZ(0); z-index: 1;}
+                .dot_box .dot {position: absolute; width: 1em; height: 1em; background: #6900ff; display: inline-block; animation: gv3 2.1s forwards linear; transform: translateZ(0) scale(0);}
+                .text {
+                    position: absolute; bottom: 0; animation: text 1050ms 2 ease-in; transform: translatez(0); width: 20%;
+                    img {width: 100%;}
+                }
+                .text_g {left: 0; transform: translate3d(0, 0, 0); animation: text-g 1050ms ease-in forwards; bottom: -16px;}
+                .text_e {left: 20%; animation-delay: 150ms;}
+                .text_n {left: 40%; animation-delay: 230ms;}
+                .text_i {left: 60%; animation-delay: 310ms;}
+                .text_a {left: 80%; animation-delay: 390ms;}
+            }
+            .txt1 {position: absolute; left: 10%; margin-left: -780px; top: 250px; animation: fadeInUp 1s 2s ease backwards;}
+            .txt2 {position: absolute; right: 50%; margin-right: -780px; top: 250px; animation: fadeInUp 1s 2s ease backwards; display: none;}
+            .txt3 {position: absolute; left: 10%; margin-left: 0; top: 180px; animation: fadeInUp 1s 2s ease backwards;}
+            .txt4 {position: absolute; left: 10%; margin-left: 0; top: 457px; animation: fadeInUp 1s 2s ease backwards;}
+        }
+
+        @keyframes gv2 {
+            0% {transform: translate3d(0, 0, 0);}
+            23% {transform: translate3d(0, 0, 0);}
+            50% {transform: translate3d(80%, 0, 0);}
+            100% {transform: translate3d(80%, 0, 0);}
+        }
+
+        .geni_tab {
+            width: 100%; height: 82px; background: #000; text-align: center; margin-bottom: 61px;
+            ul {
+                width: 100%; height: 100%; margin: 0 auto; @include flex(space-around, center);
+                li {
+                    position: relative; width: 33.33%;
+                    a {position:absolute; z-index: 3; transform: translate(-50%,-50%);}
+                    img {width: 100%;}
+                    
+                }
+                li.on{
+                    
+                    &::after {@include ab_c; width: 100%; height: 143px; background: url('../img/tab_on.png') center center; left: 50%; top: -41px; transform: translateX(-50%); z-index: 1;}
+                }
+            }
+        }
+    
+        .sec_kids {
+            width: 100%; margin: 0 auto; position: relative; padding-top: 100px; text-align: center;
+            &::before {@include ab_c; width: 338px; height: 707px; top: 25px; right: 0; background: url('../img/bg_ele_01.png');}
+            &::after {@include ab_c; width: 252px; height: 677px; top: 797px; left: 0; background: url('../img/bg_ele_02.png');}
+            img {width: 100%;}
+        }
+        .sec_kids2 {
+            padding-top: 10rem;
+            .container {width: 100%; margin: 0 auto; text-align: center;}
+            .container img {width: 90%;}
+            .slide_w {
+                margin: 5rem auto; width: 100%; text-align: center; position: relative;
+                .slide{
+                    position: relative;
+                    &::after{@include ab_c; width: 35%; height: 35%; bottom: 50px; left: 60%; background: url('../img/genia_03.png'); background-size: contain;}
+                }
+                .slide ul {@include flex(space-around, center); flex-wrap: wrap;}
+                .slide ul li {display: none;}
+                .slide ul li:nth-of-type(2) {display: block;}
+                .slide ul li:nth-of-type(2) img {width: 100%}
+                .arrow {
+                    position: absolute; top: 45%; width: 100%; display: none;
+                    .prev {left: 5%; font-size: 0; width: 63px; height: 63px; background: url('../img/btn_left.png'); display: inline-block; position: absolute;}
+                    .next {right: 5%; font-size: 0; width: 63px; height: 63px; background: url('../img/btn_right.png'); display: inline-block;position: absolute;}
+                }
+            }
+        }
+    
+    }
+
+}

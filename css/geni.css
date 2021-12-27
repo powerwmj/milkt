@@ -479,6 +479,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1100px) {
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
   header {
     width: 100%;
     height: 100px;
@@ -637,7 +641,6 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     border-top: 1px solid #e5e5e5;
   }
   footer .f_menu .inner {
-    width: 100%;
     padding: 0 5%;
   }
   footer .f_menu ul {
@@ -654,7 +657,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   }
   footer .f_menu ul li::after {
     content: '·';
-    width: 40px;
+    width: 2.5rem;
     text-align: center;
     color: #ccc;
     display: inline-block;
@@ -664,9 +667,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     width: 0;
   }
   footer .f_menu ul li a {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #181818;
-    line-height: 69px;
+    line-height: 4.5;
   }
   footer .f_menu ul li a.bold {
     font-weight: 700;
@@ -679,9 +682,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   }
   footer .copy_w .inner {
     height: 100%;
-    display: unset;
-    width: 90%;
-    padding: 0 5%;
+    display: block;
+    width: 100%;
+    padding: 0;
   }
   footer .copy_w .inner .copy {
     padding-top: 3rem;
@@ -698,7 +701,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   footer .copy_w .inner .copy p {
     font-size: 0.875rem;
     color: #6e6e6e;
-    line-height: 27px;
+    line-height: 1.6;
   }
   footer .copy_w .inner .copy p span {
     color: #d2d2d2;
@@ -832,7 +835,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     position: fixed;
     z-index: 6;
     top: calc(100% - 150px);
-    right: calc((100% - 1080px) / 2 - 109px);
+    right: 1em;
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
   }
@@ -862,6 +865,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 @media screen and (max-width: 767px) {
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
   header {
     width: 100%;
     height: 100px;
@@ -1016,28 +1023,23 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   }
   footer .f_menu {
     width: 100%;
-    height: 4.5rem;
+    height: inherit;
     border-top: 1px solid #e5e5e5;
   }
   footer .f_menu .inner {
-    width: 100%;
     padding: 0 5%;
   }
   footer .f_menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
     height: 100%;
+    text-align: center;
+  }
+  footer .f_menu ul li {
+    display: inline-block;
   }
   footer .f_menu ul li::after {
     content: '·';
-    width: 40px;
+    width: 2rem;
     text-align: center;
     color: #ccc;
     display: inline-block;
@@ -1047,28 +1049,27 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     width: 0;
   }
   footer .f_menu ul li a {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #181818;
-    line-height: 69px;
+    line-height: 2.5rem;
   }
   footer .f_menu ul li a.bold {
     font-weight: 700;
   }
   footer .copy_w {
-    width: 100%;
     height: inherit;
     background: #2d2d2d;
-    padding: 0 5%;
   }
   footer .copy_w .inner {
     height: 100%;
     display: unset;
-    width: 90%;
+    width: 100%;
     padding: 0 5%;
   }
   footer .copy_w .inner .copy {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     position: relative;
+    padding: 10% 5% 0 5%;
   }
   footer .copy_w .inner .copy strong {
     display: block;
@@ -1079,9 +1080,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     margin-bottom: 30px;
   }
   footer .copy_w .inner .copy p {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: #6e6e6e;
-    line-height: 27px;
+    line-height: 1.5;
   }
   footer .copy_w .inner .copy p span {
     color: #d2d2d2;
@@ -1089,7 +1090,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   footer .copy_w .inner .copy p small {
     font-size: 0.625rem;
     color: #6e6e6e;
-    margin-top: 12px;
+    margin-top: .8em;
     display: block;
   }
   footer .copy_w .inner .copy .awards {
@@ -1098,12 +1099,13 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     height: 75px;
     bottom: 15px;
     right: 0;
+    display: none;
   }
   footer .copy_w .inner .cs {
     width: 100%;
     height: 100%;
     background: #282828;
-    padding: 1rem;
+    padding: 5%;
     margin-top: 2rem;
   }
   footer .copy_w .inner .cs dl {
@@ -1138,6 +1140,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     width: 50%;
     color: #878787;
     font-size: 0.875rem;
+    line-height: 1.6;
   }
   footer .copy_w .inner .cs ul li span {
     display: inline-block;
@@ -1215,7 +1218,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     position: fixed;
     z-index: 6;
     top: calc(100% - 150px);
-    right: calc((100% - 1080px) / 2 - 109px);
+    right: 1em;
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
   }
@@ -1224,9 +1227,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     position: relative;
     width: 55px;
     height: 55px;
-    padding-top: 27px;
+    padding-top: 1.5rem;
     border-radius: 28px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 700;
     color: #fff;
     background-color: #239aff;
@@ -2125,6 +2128,771 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
             transform: rotate(0);
     margin-top: 0;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .contents .geni_v {
+    width: 100%;
+    height: 732px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .contents .geni_v .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 732px;
+    overflow: hidden;
+  }
+  .contents .geni_v .left .l_bg {
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg_visual_01.jpg") no-repeat;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation: gv1 1s forwards linear;
+            animation: gv1 1s forwards linear;
+  }
+  .contents .geni_v .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 732px;
+    background: url("../img/bg_visual_02.jpg") no-repeat;
+    overflow: hidden;
+  }
+  .contents .geni_v .right .light {
+    position: absolute;
+    width: 1579px;
+    height: 966px;
+    background: url("../img/obj_light.png") no-repeat center top;
+    bottom: -400px;
+    left: 0px;
+    animation: bg02 2s infinite ease-in alternate-reverse;
+  }
+  .contents .geni_v .right .robo_w {
+    position: absolute;
+    bottom: -50px;
+    left: 12rem;
+    width: 580px;
+    height: 396px;
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+    -webkit-animation: robowrap 3s infinite ease-in normal;
+            animation: robowrap 3s infinite ease-in normal;
+    z-index: 2;
+  }
+  .contents .geni_v .right .robo_w .robo_1 {
+    position: absolute;
+    left: 0;
+    width: 580px;
+    height: 396px;
+    background: url("../img/obj_genia_body.png") no-repeat center top;
+    background-size: 100%;
+    z-index: 3;
+  }
+  .contents .geni_v .right .robo_w .robo_2 {
+    position: absolute;
+    top: 190px;
+    left: 230px;
+    width: 21px;
+    height: 33px;
+    background: url("../img/obj_eye01.png") no-repeat 0 0;
+    background-size: 100%;
+    z-index: 3;
+  }
+  .contents .geni_v .right .robo_w .robo_3 {
+    position: absolute;
+    -webkit-animation: eye 3s infinite ease-in normal;
+            animation: eye 3s infinite ease-in normal;
+    top: 188px;
+    left: calc(230px + 80px);
+    width: 30px;
+    height: 34px;
+    background: url("../img/obj_eye02.png") no-repeat 0 0;
+    background-size: 100%;
+    z-index: 3;
+  }
+  .contents .geni_v .right .robo_w .robo_4 {
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 200px);
+    width: 69px;
+    height: 108px;
+    background-image: url("../img/obj_genia_left.png");
+    z-index: 2;
+    -webkit-animation: leftear 3s infinite ease-in normal;
+            animation: leftear 3s infinite ease-in normal;
+    background-size: 100%;
+  }
+  .contents .geni_v .right .robo_w .robo_5 {
+    position: absolute;
+    top: -10px;
+    left: calc(50% + 125px);
+    width: 69px;
+    height: 108px;
+    background-image: url("../img/obj_genia_right.png");
+    z-index: 2;
+    -webkit-animation: rightear 3s infinite ease-in normal;
+            animation: rightear 3s infinite ease-in normal;
+    background-size: 100%;
+  }
+  .contents .geni_v .tit_box {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    width: 685px;
+    height: 202px;
+    margin-left: -410px;
+  }
+  .contents .geni_v .tit_box .dot_box {
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    display: inline-block;
+    -webkit-animation: gv2 2.1s forwards linear;
+            animation: gv2 2.1s forwards linear;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    z-index: 1;
+  }
+  .contents .geni_v .tit_box .dot_box .dot {
+    position: absolute;
+    width: 31px;
+    height: 33px;
+    background: #6900ff;
+    display: inline-block;
+    -webkit-animation: gv3 2.1s forwards linear;
+            animation: gv3 2.1s forwards linear;
+    -webkit-transform: translateZ(0) scale(0);
+            transform: translateZ(0) scale(0);
+  }
+  .contents .geni_v .tit_box .text {
+    position: absolute;
+    bottom: 0;
+    -webkit-animation: text 1050ms 2 ease-in;
+            animation: text 1050ms 2 ease-in;
+    -webkit-transform: translatez(0);
+            transform: translatez(0);
+  }
+  .contents .geni_v .tit_box .text_g {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-animation: text-g 1050ms ease-in forwards;
+            animation: text-g 1050ms ease-in forwards;
+    bottom: -47px;
+  }
+  .contents .geni_v .tit_box .text_e {
+    left: 141px;
+    -webkit-animation-delay: 150ms;
+            animation-delay: 150ms;
+  }
+  .contents .geni_v .tit_box .text_n {
+    left: 266px;
+    -webkit-animation-delay: 230ms;
+            animation-delay: 230ms;
+  }
+  .contents .geni_v .tit_box .text_i {
+    left: 404px;
+    -webkit-animation-delay: 310ms;
+            animation-delay: 310ms;
+  }
+  .contents .geni_v .tit_box .text_a {
+    left: 471px;
+    -webkit-animation-delay: 390ms;
+            animation-delay: 390ms;
+  }
+  .contents .geni_v .txt1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -780px;
+    top: 250px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+  }
+  .contents .geni_v .txt2 {
+    position: absolute;
+    right: 50%;
+    margin-right: -780px;
+    top: 250px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+    display: none;
+  }
+  .contents .geni_v .txt3 {
+    position: absolute;
+    left: 50%;
+    margin-left: -410px;
+    top: 180px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+  }
+  .contents .geni_v .txt4 {
+    position: absolute;
+    left: 50%;
+    margin-left: -258px;
+    top: 457px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+  }
+  .contents .geni_tab {
+    width: 100%;
+    height: 82px;
+    background: #000;
+    text-align: center;
+    margin-bottom: 61px;
+  }
+  .contents .geni_tab ul {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contents .geni_tab ul li {
+    position: relative;
+    width: 33.33%;
+  }
+  .contents .geni_tab ul li a {
+    position: absolute;
+    z-index: 3;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .contents .geni_tab ul li a img {
+    width: 100%;
+  }
+  .contents .geni_tab ul li.on::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 143px;
+    background: url("../img/tab_on.png") center center;
+    left: 50%;
+    top: -41px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 1;
+  }
+  .contents .sec_kids {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .contents .sec_kids::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 338px;
+    height: 707px;
+    top: 25px;
+    right: 0;
+    background: url("../img/bg_ele_01.png");
+  }
+  .contents .sec_kids::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 252px;
+    height: 677px;
+    top: 797px;
+    left: 0;
+    background: url("../img/bg_ele_02.png");
+  }
+  .contents .sec_kids img {
+    width: 100%;
+  }
+  .contents .sec_kids2 {
+    padding-top: 10rem;
+  }
+  .contents .sec_kids2 .container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contents .sec_kids2 .container img {
+    width: 90%;
+  }
+  .contents .sec_kids2 .slide_w {
+    margin: 5rem auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .contents .sec_kids2 .slide_w .slide {
+    position: relative;
+  }
+  .contents .sec_kids2 .slide_w .slide::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 35%;
+    bottom: 50px;
+    left: 60%;
+    background: url("../img/genia_03.png");
+    background-size: contain;
+  }
+  .contents .sec_kids2 .slide_w .slide ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contents .sec_kids2 .slide_w .slide ul li {
+    display: none;
+  }
+  .contents .sec_kids2 .slide_w .slide ul li:nth-of-type(2) {
+    display: block;
+  }
+  .contents .sec_kids2 .slide_w .slide ul li:nth-of-type(2) img {
+    width: 100%;
+  }
+  .contents .sec_kids2 .slide_w .arrow {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+  }
+  .contents .sec_kids2 .slide_w .arrow .prev {
+    left: 5%;
+    font-size: 0;
+    width: 63px;
+    height: 63px;
+    background: url("../img/btn_left.png");
+    display: inline-block;
+    position: absolute;
+  }
+  .contents .sec_kids2 .slide_w .arrow .next {
+    right: 5%;
+    font-size: 0;
+    width: 63px;
+    height: 63px;
+    background: url("../img/btn_right.png");
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contents .geni_v {
+    width: 100%;
+    height: 732px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .contents .geni_v .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 732px;
+    overflow: hidden;
+  }
+  .contents .geni_v .left .l_bg {
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg_visual_01.jpg") no-repeat;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation: gv1 1s forwards linear;
+            animation: gv1 1s forwards linear;
+  }
+  .contents .geni_v .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 732px;
+    background: url("../img/bg_visual_02.jpg") no-repeat;
+    overflow: hidden;
+  }
+  .contents .geni_v .right .light {
+    position: absolute;
+    width: 1579px;
+    height: 966px;
+    background: url("../img/obj_light.png") no-repeat center top;
+    bottom: -400px;
+    left: 0px;
+    animation: bg02 2s infinite ease-in alternate-reverse;
+  }
+  .contents .geni_v .right .robo_w {
+    position: absolute;
+    bottom: -50px;
+    left: 2rem;
+    width: 580px;
+    height: 396px;
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+    -webkit-animation: robowrap 3s infinite ease-in normal;
+            animation: robowrap 3s infinite ease-in normal;
+    z-index: 2;
+  }
+  .contents .geni_v .right .robo_w .robo_1 {
+    position: absolute;
+    left: 0;
+    width: 580px;
+    height: 396px;
+    background: url("../img/obj_genia_body.png") no-repeat center top;
+    background-size: 100%;
+    z-index: 3;
+  }
+  .contents .geni_v .right .robo_w .robo_2 {
+    position: absolute;
+    top: 190px;
+    left: 230px;
+    width: 21px;
+    height: 33px;
+    background: url("../img/obj_eye01.png") no-repeat 0 0;
+    background-size: 100%;
+    z-index: 3;
+  }
+  .contents .geni_v .right .robo_w .robo_3 {
+    position: absolute;
+    -webkit-animation: eye 3s infinite ease-in normal;
+            animation: eye 3s infinite ease-in normal;
+    top: 188px;
+    left: calc(230px + 80px);
+    width: 30px;
+    height: 34px;
+    background: url("../img/obj_eye02.png") no-repeat 0 0;
+    background-size: 100%;
+    z-index: 3;
+  }
+  .contents .geni_v .right .robo_w .robo_4 {
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 200px);
+    width: 69px;
+    height: 108px;
+    background-image: url("../img/obj_genia_left.png");
+    z-index: 2;
+    -webkit-animation: leftear 3s infinite ease-in normal;
+            animation: leftear 3s infinite ease-in normal;
+    background-size: 100%;
+  }
+  .contents .geni_v .right .robo_w .robo_5 {
+    position: absolute;
+    top: -10px;
+    left: calc(50% + 125px);
+    width: 69px;
+    height: 108px;
+    background-image: url("../img/obj_genia_right.png");
+    z-index: 2;
+    -webkit-animation: rightear 3s infinite ease-in normal;
+            animation: rightear 3s infinite ease-in normal;
+    background-size: 100%;
+  }
+  .contents .geni_v .tit_box {
+    z-index: 1;
+    position: absolute;
+    left: 5%;
+    top: 10em;
+    width: 75%;
+    height: 30%;
+    margin-left: 0;
+  }
+  .contents .geni_v .tit_box .dot_box {
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    display: inline-block;
+    -webkit-animation: gv2 2.1s forwards linear;
+            animation: gv2 2.1s forwards linear;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    z-index: 1;
+  }
+  .contents .geni_v .tit_box .dot_box .dot {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: #6900ff;
+    display: inline-block;
+    -webkit-animation: gv3 2.1s forwards linear;
+            animation: gv3 2.1s forwards linear;
+    -webkit-transform: translateZ(0) scale(0);
+            transform: translateZ(0) scale(0);
+  }
+  .contents .geni_v .tit_box .text {
+    position: absolute;
+    bottom: 0;
+    -webkit-animation: text 1050ms 2 ease-in;
+            animation: text 1050ms 2 ease-in;
+    -webkit-transform: translatez(0);
+            transform: translatez(0);
+    width: 20%;
+  }
+  .contents .geni_v .tit_box .text img {
+    width: 100%;
+  }
+  .contents .geni_v .tit_box .text_g {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-animation: text-g 1050ms ease-in forwards;
+            animation: text-g 1050ms ease-in forwards;
+    bottom: -16px;
+  }
+  .contents .geni_v .tit_box .text_e {
+    left: 20%;
+    -webkit-animation-delay: 150ms;
+            animation-delay: 150ms;
+  }
+  .contents .geni_v .tit_box .text_n {
+    left: 40%;
+    -webkit-animation-delay: 230ms;
+            animation-delay: 230ms;
+  }
+  .contents .geni_v .tit_box .text_i {
+    left: 60%;
+    -webkit-animation-delay: 310ms;
+            animation-delay: 310ms;
+  }
+  .contents .geni_v .tit_box .text_a {
+    left: 80%;
+    -webkit-animation-delay: 390ms;
+            animation-delay: 390ms;
+  }
+  .contents .geni_v .txt1 {
+    position: absolute;
+    left: 10%;
+    margin-left: -780px;
+    top: 250px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+  }
+  .contents .geni_v .txt2 {
+    position: absolute;
+    right: 50%;
+    margin-right: -780px;
+    top: 250px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+    display: none;
+  }
+  .contents .geni_v .txt3 {
+    position: absolute;
+    left: 10%;
+    margin-left: 0;
+    top: 180px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+  }
+  .contents .geni_v .txt4 {
+    position: absolute;
+    left: 10%;
+    margin-left: 0;
+    top: 457px;
+    -webkit-animation: fadeInUp 1s 2s ease backwards;
+            animation: fadeInUp 1s 2s ease backwards;
+  }
+  @-webkit-keyframes gv2 {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    23% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    50% {
+      -webkit-transform: translate3d(80%, 0, 0);
+              transform: translate3d(80%, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(80%, 0, 0);
+              transform: translate3d(80%, 0, 0);
+    }
+  }
+  @keyframes gv2 {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    23% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    50% {
+      -webkit-transform: translate3d(80%, 0, 0);
+              transform: translate3d(80%, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(80%, 0, 0);
+              transform: translate3d(80%, 0, 0);
+    }
+  }
+  .contents .geni_tab {
+    width: 100%;
+    height: 82px;
+    background: #000;
+    text-align: center;
+    margin-bottom: 61px;
+  }
+  .contents .geni_tab ul {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contents .geni_tab ul li {
+    position: relative;
+    width: 33.33%;
+  }
+  .contents .geni_tab ul li a {
+    position: absolute;
+    z-index: 3;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .contents .geni_tab ul li img {
+    width: 100%;
+  }
+  .contents .geni_tab ul li.on::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 143px;
+    background: url("../img/tab_on.png") center center;
+    left: 50%;
+    top: -41px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 1;
+  }
+  .contents .sec_kids {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .contents .sec_kids::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 338px;
+    height: 707px;
+    top: 25px;
+    right: 0;
+    background: url("../img/bg_ele_01.png");
+  }
+  .contents .sec_kids::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 252px;
+    height: 677px;
+    top: 797px;
+    left: 0;
+    background: url("../img/bg_ele_02.png");
+  }
+  .contents .sec_kids img {
+    width: 100%;
+  }
+  .contents .sec_kids2 {
+    padding-top: 10rem;
+  }
+  .contents .sec_kids2 .container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contents .sec_kids2 .container img {
+    width: 90%;
+  }
+  .contents .sec_kids2 .slide_w {
+    margin: 5rem auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .contents .sec_kids2 .slide_w .slide {
+    position: relative;
+  }
+  .contents .sec_kids2 .slide_w .slide::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 35%;
+    bottom: 50px;
+    left: 60%;
+    background: url("../img/genia_03.png");
+    background-size: contain;
+  }
+  .contents .sec_kids2 .slide_w .slide ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contents .sec_kids2 .slide_w .slide ul li {
+    display: none;
+  }
+  .contents .sec_kids2 .slide_w .slide ul li:nth-of-type(2) {
+    display: block;
+  }
+  .contents .sec_kids2 .slide_w .slide ul li:nth-of-type(2) img {
+    width: 100%;
+  }
+  .contents .sec_kids2 .slide_w .arrow {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: none;
+  }
+  .contents .sec_kids2 .slide_w .arrow .prev {
+    left: 5%;
+    font-size: 0;
+    width: 63px;
+    height: 63px;
+    background: url("../img/btn_left.png");
+    display: inline-block;
+    position: absolute;
+  }
+  .contents .sec_kids2 .slide_w .arrow .next {
+    right: 5%;
+    font-size: 0;
+    width: 63px;
+    height: 63px;
+    background: url("../img/btn_right.png");
+    display: inline-block;
+    position: absolute;
   }
 }
 /*# sourceMappingURL=geni.css.map */

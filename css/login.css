@@ -479,6 +479,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1100px) {
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
   header {
     width: 100%;
     height: 100px;
@@ -637,7 +641,6 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     border-top: 1px solid #e5e5e5;
   }
   footer .f_menu .inner {
-    width: 100%;
     padding: 0 5%;
   }
   footer .f_menu ul {
@@ -654,7 +657,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   }
   footer .f_menu ul li::after {
     content: '·';
-    width: 40px;
+    width: 2.5rem;
     text-align: center;
     color: #ccc;
     display: inline-block;
@@ -664,9 +667,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     width: 0;
   }
   footer .f_menu ul li a {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #181818;
-    line-height: 69px;
+    line-height: 4.5;
   }
   footer .f_menu ul li a.bold {
     font-weight: 700;
@@ -679,9 +682,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   }
   footer .copy_w .inner {
     height: 100%;
-    display: unset;
-    width: 90%;
-    padding: 0 5%;
+    display: block;
+    width: 100%;
+    padding: 0;
   }
   footer .copy_w .inner .copy {
     padding-top: 3rem;
@@ -698,7 +701,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   footer .copy_w .inner .copy p {
     font-size: 0.875rem;
     color: #6e6e6e;
-    line-height: 27px;
+    line-height: 1.6;
   }
   footer .copy_w .inner .copy p span {
     color: #d2d2d2;
@@ -832,7 +835,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     position: fixed;
     z-index: 6;
     top: calc(100% - 150px);
-    right: calc((100% - 1080px) / 2 - 109px);
+    right: 1em;
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
   }
@@ -862,6 +865,10 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
 }
 
 @media screen and (max-width: 767px) {
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
   header {
     width: 100%;
     height: 100px;
@@ -1016,28 +1023,23 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   }
   footer .f_menu {
     width: 100%;
-    height: 4.5rem;
+    height: inherit;
     border-top: 1px solid #e5e5e5;
   }
   footer .f_menu .inner {
-    width: 100%;
     padding: 0 5%;
   }
   footer .f_menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
     height: 100%;
+    text-align: center;
+  }
+  footer .f_menu ul li {
+    display: inline-block;
   }
   footer .f_menu ul li::after {
     content: '·';
-    width: 40px;
+    width: 2rem;
     text-align: center;
     color: #ccc;
     display: inline-block;
@@ -1047,28 +1049,27 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     width: 0;
   }
   footer .f_menu ul li a {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #181818;
-    line-height: 69px;
+    line-height: 2.5rem;
   }
   footer .f_menu ul li a.bold {
     font-weight: 700;
   }
   footer .copy_w {
-    width: 100%;
     height: inherit;
     background: #2d2d2d;
-    padding: 0 5%;
   }
   footer .copy_w .inner {
     height: 100%;
     display: unset;
-    width: 90%;
+    width: 100%;
     padding: 0 5%;
   }
   footer .copy_w .inner .copy {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     position: relative;
+    padding: 10% 5% 0 5%;
   }
   footer .copy_w .inner .copy strong {
     display: block;
@@ -1079,9 +1080,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     margin-bottom: 30px;
   }
   footer .copy_w .inner .copy p {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: #6e6e6e;
-    line-height: 27px;
+    line-height: 1.5;
   }
   footer .copy_w .inner .copy p span {
     color: #d2d2d2;
@@ -1089,7 +1090,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   footer .copy_w .inner .copy p small {
     font-size: 0.625rem;
     color: #6e6e6e;
-    margin-top: 12px;
+    margin-top: .8em;
     display: block;
   }
   footer .copy_w .inner .copy .awards {
@@ -1098,12 +1099,13 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     height: 75px;
     bottom: 15px;
     right: 0;
+    display: none;
   }
   footer .copy_w .inner .cs {
     width: 100%;
     height: 100%;
     background: #282828;
-    padding: 1rem;
+    padding: 5%;
     margin-top: 2rem;
   }
   footer .copy_w .inner .cs dl {
@@ -1138,6 +1140,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     width: 50%;
     color: #878787;
     font-size: 0.875rem;
+    line-height: 1.6;
   }
   footer .copy_w .inner .cs ul li span {
     display: inline-block;
@@ -1215,7 +1218,7 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     position: fixed;
     z-index: 6;
     top: calc(100% - 150px);
-    right: calc((100% - 1080px) / 2 - 109px);
+    right: 1em;
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
   }
@@ -1224,9 +1227,9 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
     position: relative;
     width: 55px;
     height: 55px;
-    padding-top: 27px;
+    padding-top: 1.5rem;
     border-radius: 28px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 700;
     color: #fff;
     background-color: #239aff;
@@ -1375,5 +1378,230 @@ footer .copy_w .inner .cs ul.sns li a.tvcast {
   font-size: 0.875rem;
   color: #222;
   padding: 0 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .contents .inner.login {
+    padding: 3rem 5% 10rem 5%;
+  }
+  .contents .inner.login .tit {
+    text-align: center;
+    height: 8rem;
+  }
+  .contents .inner.login .tit h3 {
+    font-size: 3rem;
+    color: #111;
+    font-weight: 700;
+  }
+  .contents .inner.login .tit p {
+    margin-top: 1.125rem;
+    font-size: 1.25rem;
+    color: #999;
+    line-height: 31px;
+  }
+  .contents .inner.login .log_w {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
+  .contents .inner.login .log_w ul.log {
+    width: 100%;
+    margin: 5rem 0 1rem 0;
+  }
+  .contents .inner.login .log_w ul.log li {
+    margin-bottom: 1px;
+    position: relative;
+  }
+  .contents .inner.login .log_w ul.log li::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 30px;
+    left: 20px;
+    top: calc(50% - 15px);
+    z-index: 1;
+  }
+  .contents .inner.login .log_w ul.log li:nth-of-type(1)::before {
+    background: #fff url("../img/ico_login.png") no-repeat 0 0;
+  }
+  .contents .inner.login .log_w ul.log li:nth-of-type(2)::before {
+    background: #fff url("../img/ico_login.png") no-repeat 0 -70px;
+  }
+  .contents .inner.login .log_w ul.log li label {
+    display: none;
+  }
+  .contents .inner.login .log_w ul.log li input {
+    width: 100%;
+    height: 5rem;
+    border-bottom: 1px solid #999;
+    padding: 0.5rem 0 0 3.5rem;
+    position: relative;
+  }
+  .contents .inner.login .log_w ul.log li a {
+    display: block;
+    padding: 1.25rem 0;
+    color: #fff;
+    background-color: #0c86ee;
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 0.8rem;
+  }
+  .contents .inner.login .log_w .setting {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .contents .inner.login .log_w .setting .chk label {
+    color: #222;
+    font-size: 0.875rem;
+  }
+  .contents .inner.login .log_w .setting ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .contents .inner.login .log_w .setting ul li:nth-of-type(1)::before {
+    content: '0';
+    font-size: 0;
+  }
+  .contents .inner.login .log_w .setting ul li::before {
+    content: '|';
+    font-size: 0.5rem;
+  }
+  .contents .inner.login .log_w .setting ul li a {
+    font-size: 0.875rem;
+    color: #222;
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contents .inner.login {
+    padding: 3rem 5% 10rem 5%;
+  }
+  .contents .inner.login .tit {
+    text-align: center;
+    height: 8rem;
+  }
+  .contents .inner.login .tit h3 {
+    font-size: 3rem;
+    color: #111;
+    font-weight: 700;
+  }
+  .contents .inner.login .tit p {
+    margin-top: 22px;
+    font-size: 1.25rem;
+    color: #999;
+    line-height: 31px;
+  }
+  .contents .inner.login .log_w {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .contents .inner.login .log_w ul.log {
+    width: 100%;
+    margin: 5rem 0 1rem 0;
+  }
+  .contents .inner.login .log_w ul.log li {
+    margin-bottom: 1px;
+    position: relative;
+  }
+  .contents .inner.login .log_w ul.log li::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 30px;
+    left: 20px;
+    top: calc(50% - 15px);
+    z-index: 1;
+  }
+  .contents .inner.login .log_w ul.log li:nth-of-type(1)::before {
+    background: #fff url("../img/ico_login.png") no-repeat 0 0;
+  }
+  .contents .inner.login .log_w ul.log li:nth-of-type(2)::before {
+    background: #fff url("../img/ico_login.png") no-repeat 0 -70px;
+  }
+  .contents .inner.login .log_w ul.log li label {
+    display: none;
+  }
+  .contents .inner.login .log_w ul.log li input {
+    width: 100%;
+    height: 5rem;
+    border-bottom: 1px solid #999;
+    padding: 0.5rem 0 0 3.5rem;
+    position: relative;
+  }
+  .contents .inner.login .log_w ul.log li a {
+    display: block;
+    padding: 20px 0;
+    color: #fff;
+    background-color: #0c86ee;
+    font-size: 1.25rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 14px;
+  }
+  .contents .inner.login .log_w .setting {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .contents .inner.login .log_w .setting .chk label {
+    color: #222;
+    font-size: 0.875rem;
+  }
+  .contents .inner.login .log_w .setting ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .contents .inner.login .log_w .setting ul li:nth-of-type(1)::before {
+    content: '0';
+    font-size: 0;
+  }
+  .contents .inner.login .log_w .setting ul li::before {
+    content: '|';
+    font-size: 0.5rem;
+  }
+  .contents .inner.login .log_w .setting ul li a {
+    font-size: 0.875rem;
+    color: #222;
+    padding: 0 12px;
+  }
 }
 /*# sourceMappingURL=login.css.map */
